@@ -1,13 +1,12 @@
-function App() {
-  const isColorBlue = true;
+import { ChakraProvider } from '@chakra-ui/react'
+import Navbar from './components/Navbar/Navbar'
 
-  console.log(isColorBlue ? "Es color Azul - ternario" : "No es color azul");
-    
+function App() {
 
   return (
-    isColorBlue ? <div>
-      Es color Azul
-    </div> : <div>No es color azul</div>
+    <ChakraProvider>
+      <Navbar />
+    </ChakraProvider>
   )
 }
 
