@@ -1,5 +1,5 @@
 import { Box, Text } from "@chakra-ui/react";
-import myImage from '../../assets/Cart-icon.png'
+import myImage from '../../assets/Cart-icon.png';
 
 const CartWidget = () => {
     return (

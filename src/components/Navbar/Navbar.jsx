@@ -15,7 +15,7 @@ import {
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon } from '@chakra-ui/icons'
 import CartWidget from '../CartWidget/CartWidget';
-
+import myImage from '../../assets/f1-logo.png';
 
 const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -24,7 +24,9 @@ const Navbar = () => {
         <>
             <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
-                    <Box>MikeCommerce</Box>
+                    <Box>
+                        <img src={myImage} alt="logo-formula-1" />
+                    </Box>
                     
                     <Flex alignItems={'center'}>
                         <Stack direction={'row'} spacing={7}>
