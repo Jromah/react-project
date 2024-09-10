@@ -1,7 +1,7 @@
 import { Box, Text } from "@chakra-ui/react";
 import myImage from '../../assets/Cart-icon.png';
 
-const CartWidget = () => {
+export const CartWidget = () => {
     return (
         <Box>
             <img src={myImage} alt="logo-carrito-de-compras" />
@@ -9,6 +9,4 @@ const CartWidget = () => {
         </Box>
 
     )
-}
-
-export default CartWidget;
+};

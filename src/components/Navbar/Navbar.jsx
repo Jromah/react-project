@@ -12,12 +12,12 @@ import {
     Stack,
     useColorMode,
     Center,
-} from '@chakra-ui/react'
-import { MoonIcon, SunIcon } from '@chakra-ui/icons'
-import CartWidget from '../CartWidget/CartWidget';
+} from '@chakra-ui/react';
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
+import {CartWidget} from '../CartWidget';
 import myImage from '../../assets/f1-logo.png';
 
-const Navbar = () => {
+export const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
 
     return (
@@ -73,5 +73,3 @@ const Navbar = () => {
         </>
     )
 };
-
-export default Navbar;

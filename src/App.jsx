@@ -1,15 +1,13 @@
-import { ChakraProvider } from '@chakra-ui/react'
-import Navbar from './components/Navbar/Navbar'
-import ItemListContainer from './components/ItemListContainer/ItemListContainer'
+import React from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
+import { MainRouter } from './routes/MainRouter';
 
 function App() {
-
   return (
     <ChakraProvider>
-      <Navbar />
-      <ItemListContainer greeting="Hello Stranger, ¿What are you Buying?"/>
+      <MainRouter />
     </ChakraProvider>
-  )
+  );
 }
 
-export default App
+export default App;
