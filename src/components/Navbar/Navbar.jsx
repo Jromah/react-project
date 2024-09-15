@@ -16,6 +16,7 @@ import {
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import {CartWidget} from '../CartWidget';
 import myImage from '../../assets/f1-logo.png';
+import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
@@ -25,7 +26,7 @@ export const Navbar = () => {
             <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
                     <Box>
-                        <img src={myImage} alt="logo-formula-1" />
+                        <Link to="/"><img src={myImage} alt="logo-formula-1" /></Link>
                     </Box>
                     
                     <Flex alignItems={'center'}>
