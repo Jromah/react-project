@@ -4,7 +4,7 @@ import { useProducts } from '../hooks';
 
 export const Home = () => {
 
-  const { products, loading} = useProducts();
+  const { products, loading } = useProducts();
 
   return (
     <ItemListContainer products={products} />

@@ -14,12 +14,15 @@ import {
     Center,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
-import {CartWidget} from '../CartWidget';
+import { CartWidget } from '../CartWidget';
 import myImage from '../../assets/f1-logo.png';
 import { Link } from 'react-router-dom';
+import { useCategory } from '../../hooks';
 
 export const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode()
+
+    const { category } = useCategory();
 
     return (
         <>
@@ -28,7 +31,16 @@ export const Navbar = () => {
                     <Box>
                         <Link to="/"><img src={myImage} alt="logo-formula-1" /></Link>
                     </Box>
-                    
+                    <Menu>
+                        <MenuButton as={Link} cursor="pointer" style={{ marginLeft: 30 }}>
+                            Categorias
+                        </MenuButton>
+                        <MenuList maxHeight={'50vh'} overflowY={'scroll'}>
+                            {category.map((category) => (
+                                <MenuItem key={category.slug}><Link to={`/category/${category.slug}`}>{category.name}</Link></MenuItem>
+                            ))}
+                        </MenuList>
+                    </Menu>
                     <Flex alignItems={'center'}>
                         <Stack direction={'row'} spacing={7}>
                             <CartWidget />
@@ -39,21 +51,22 @@ export const Navbar = () => {
                             <Menu>
                                 <MenuButton
                                     as={Button}
-                                    rounded={'full'}
-                                    variant={'link'}
-                                    cursor={'pointer'}
-                                    minW={0}>
+                                    rounded={"full"}
+                                    variant={"link"}
+                                    cursor={"pointer"}
+                                    minW={0}
+                                >
                                     <Avatar
-                                        size={'sm'}
-                                        src={'https://avatars.dicebear.com/api/male/username.svg'}
+                                        size={"sm"}
+                                        src={"https://avatars.dicebear.com/api/male/username.svg"}
                                     />
                                 </MenuButton>
-                                <MenuList alignItems={'center'}>
+                                <MenuList alignItems={"center"}>
                                     <br />
                                     <Center>
                                         <Avatar
-                                            size={'2xl'}
-                                            src={'https://avatars.dicebear.com/api/male/username.svg'}
+                                            size={"2xl"}
+                                            src={"https://avatars.dicebear.com/api/male/username.svg"}
                                         />
                                     </Center>
                                     <br />

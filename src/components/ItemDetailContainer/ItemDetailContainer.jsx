@@ -16,21 +16,21 @@ import {
 export const ItemDetailContainer = ({ product }) => {
   const [showCount, setShowCount] = useState(false);
   const [count, setCount] = useState(0);
- 
+
   const handleShowCount = () => {
     setShowCount(!showCount);
   };
- 
+
   const handleIncrement = () => {
     setCount(count + 1);
   };
- 
+
   const handleDecrement = () => {
     if (count > 0) {
       setCount(count - 1);
     }
   };
- 
+
   return (
     <Container maxW={"7xl"}>
       <SimpleGrid
@@ -66,7 +66,7 @@ export const ItemDetailContainer = ({ product }) => {
               ${product.price} USD
             </Text>
           </Box>
- 
+
           <Stack
             spacing={{ base: 4, sm: 6 }}
             direction={"column"}
@@ -86,7 +86,7 @@ export const ItemDetailContainer = ({ product }) => {
               </Text>
             </VStack>
           </Stack>
- 
+
           <Button
             rounded={"none"}
             w={"full"}
@@ -116,4 +116,3 @@ export const ItemDetailContainer = ({ product }) => {
     </Container>
   );
 };
- 
