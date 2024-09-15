@@ -6,12 +6,15 @@ export const useProducts = () => {
     const [loading, setLoading] = React.useState(true);
 
     React.useEffect(() => {
-        getAllProducts().then((response) => {
+        getAllProducts()
+        .then((response) => {
             setProducts(response.data.products);
-        }).catch((error) => {
+        })
+        .catch((error) => {
             console.error(error);
             
-        }).finally(() => setLoading (false));
+        })
+        .finally(() => setLoading (false));
     }, []);
 
     return { products, loading};

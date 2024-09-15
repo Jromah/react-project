@@ -6,6 +6,6 @@ export async function getAllProducts() {
 
 }
 
-export async function getProductsById (id) {
-    return await axios.getfetch('https://dummyjson.com/product/${id}')
+export async function getProductById(id) {
+    return await axios.get(`https://dummyjson.com/products/${id}`);
 }

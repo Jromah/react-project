@@ -39,7 +39,7 @@ import { Link } from "react-router-dom";
                   Add to cart
                 </Button> */}
                 {/*<Link to={`/item/${product.id}`}>Ir a Detalle</Link> */}
-                <Link to={ '/item/${produc.id}' }> Ver Detalles</Link>
+                <Link to={ '/item/${produc.id}' }> Ver Detalles </Link>
               </ButtonGroup>
             </CardFooter>
           </Card>
