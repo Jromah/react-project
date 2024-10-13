@@ -59,7 +59,7 @@ export const ItemDetailContainer = ({ product }) => {
               {product.title}
             </Heading>
             <Text
-              color={useColorModeValue("gray.900", "gray.400")}
+              color={useColorModeValue("yellow.900", "yellow.400")}
               fontWeight={300}
               fontSize={"2xl"}
             >

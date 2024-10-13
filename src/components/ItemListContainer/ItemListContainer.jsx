@@ -26,7 +26,7 @@ export const ItemListContainer = ({ products }) => {
             <Stack mt="6" spacing="3">
               <Heading size="md">{product.title}</Heading>
               <Text>{product.description}</Text>
-              <Text color="blue.600" fontSize="2xl">
+              <Text color="red.600" fontSize="2xl">
                 {product.price}
               </Text>
             </Stack>
@@ -34,9 +34,7 @@ export const ItemListContainer = ({ products }) => {
           <Divider />
           <CardFooter>
             <ButtonGroup spacing="2">
-              {/* <Button variant="ghost" colorScheme="blue">
-                Add to cart
-              </Button> */}
+
               <Link to={`/item/${product.id}`}>
                 {" "}
                 Ir a detalle del producto{" "}

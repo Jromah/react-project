@@ -26,7 +26,7 @@ export const Navbar = () => {
 
     return (
         <>
-            <Box bg={useColorModeValue('gray.100', 'gray.900')} px={4}>
+            <Box bg={useColorModeValue('red.600', 'red.900')} px={4}>
                 <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
                     <Box>
                         <Link to="/"><img src={myImage} alt="logo-formula-1" /></Link>
