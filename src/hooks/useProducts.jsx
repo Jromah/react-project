@@ -4,6 +4,7 @@ import { getAllProducts } from "../services/products.service";
 export const useProducts = () => {
   const [products, setProducts] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
+  const [error, setError] = React.useState(false);
 
   React.useEffect(() => {
     getAllProducts()
@@ -11,10 +12,11 @@ export const useProducts = () => {
         setProducts(response.data.products);
       })
       .catch((error) => {
+        setError(true);
         console.error(error);
       })
       .finally(() => setLoading(false));
   }, []);
 
-  return { products, loading };
+  return { products, loading, error };
 };
