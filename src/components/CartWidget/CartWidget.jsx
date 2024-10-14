@@ -6,6 +6,10 @@ import { CartContext } from "../../context";
 export const CartWidget = () => {
 
     const { cartState } = useContext(CartContext);
+    console.log(cartState);
+    
+    const qtyTotalItems = cartState.reduce((acc, item) => acc + item.qtyItem, 0);
+
     return (
         <Flex
             alignItems={"center"}
@@ -13,7 +17,7 @@ export const CartWidget = () => {
             justifyContent={"space-between"}
             width={"60px"}>
             <img src={myImage} alt="logo-carrito-de-compras" />
-            <Text fontSize={"1.5rem"}>{cartState}</Text>
+            <Text fontSize={"1.5rem"}>{qtyTotalItems}</Text>
         </Flex>
 
     )
