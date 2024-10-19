@@ -13,6 +13,9 @@ import {
 import { Link } from "react-router-dom";
 
 export const ItemListContainer = ({ products }) => {
+  const categories = products.map((product) => product.category);
+  const uniqueCategories = [...new Set (categories)];
+
   return (
     <Box display={"flex"} flexWrap={"wrap"}>
       {products.map((product) => (

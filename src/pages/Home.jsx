@@ -1,11 +1,11 @@
 import React from 'react';
 import { ItemListContainer } from '../components';
-import { useProducts } from '../hooks';
+import { useItemsCollection } from '../hooks';
 import { Box, Flex, Spinner } from '@chakra-ui/react';
 
 export const Home = () => {
 
-  const { products, loading, error } = useProducts();
+  const { items, loading, error } = useItemsCollection("products");
 
   return loading ? (
 
@@ -21,7 +21,7 @@ export const Home = () => {
     <Box>
       Ocurrio un error al momento de cargar los productos. Actualize o contacte a soporte =) xoxo.
     </Box>
-  ) : (<ItemListContainer products={products} />
+  ) : (<ItemListContainer products={items} />
 
   );
 };

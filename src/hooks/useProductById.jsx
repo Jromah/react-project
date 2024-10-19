@@ -11,7 +11,7 @@ export const useProductById = (id) => {
     const productItem = doc(db, 'products', id);
     getDoc(productItem)
     .then((snapshot) => {
-      setProduct({id: snapshot.id, ...snapshot.data() })
+      setProduct({id: snapshot.id, ...snapshot.data() });
     })
     .catch((error) => {console.log(error)})
     .finally(() => setLoading(false));
